@@ -5,12 +5,12 @@ class StoreupsController < ApplicationController
   def create
   	@store = Storeup.new(store_params)
   	if @store.save
-  		redirect_to 
+  		redirect_to '/storesignup' , :notice => "Your Store has been added Wait a bit for Admins Approval"
   	end
   end
 
  private
  def store_params
- 	params.require(:Storeup).permit(:store_name,:licence,:owner_name,:owner_cnic)
+ 	params.require(:storeup).permit(:store_name,:licence,:owner_name,:owner_cnic)
  end
 end
