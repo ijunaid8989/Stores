@@ -15,5 +15,13 @@
 		<%= f.label :owner_cnic, "Owner CNIC :" %>
 		<%= f.text_field :owner_cnic , :class => "form-control" , :placeholder => "Owner Cnic" %>
 	</div>
+		<div class="form-group">
+		<%= f.label :owner_email, "Owner CNIC :" %>
+		<%= f.text_field :email , :class => "form-control" , :placeholder => "Owner Email" %>
+	</div>
+		<div class="form-group">
+		<%= f.label :owner_cnic, "Account Password :" %>
+		<%= f.password_field :password_digest , :class => "form-control" , :placeholder => "Account Password" %>
+	</div>
 	<%= f.submit :SignUp , :class => "btn btn-primary" %>
 <% end %>

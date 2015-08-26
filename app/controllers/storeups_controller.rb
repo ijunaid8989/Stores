@@ -11,6 +11,6 @@ class StoreupsController < ApplicationController
 
  private
  def store_params
- 	params.require(:storeup).permit(:store_name,:licence,:owner_name,:owner_cnic)
+ 	params.require(:storeup).permit(:store_name,:licence,:owner_name,:owner_cnic, :email , :password_digest)
  end
 end
