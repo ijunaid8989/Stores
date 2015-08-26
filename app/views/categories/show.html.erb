@@ -1,0 +1,20 @@
+<table id="level_forms" class="table table-hover">
+	<thead>
+		<tr>
+			<th>Row</th>
+        	<th>Category Name</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<% if !@allcats.blank? %>
+    	  <% for item in @allcats %>
+    	    <tr>
+    			<td><%= item.id %></td>
+            	<td><%= item.name %></td>
+            	<td><%= link_to "Edit", edit_category_path(item.id) %></td>
+            	<td><%= link_to "Delete", item , method: :delete, data: { confirm: "are you sure?"} %></td>
+        	</tr>
+    	  <% end %>    	  
+    	<% end %>
+    </tbody>
+</table>

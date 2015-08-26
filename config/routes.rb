@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'storeups/index'
+
   get 'categories/index'
 
   get 'sessions/index'
@@ -20,5 +22,7 @@ Rails.application.routes.draw do
   get "adminout" => "sessions#destroy" , :as => "adminout"
 
   get "addcategory" => "categories#index" , :as => "addcategory"
+
+  get "allcategories" => "categories#show" , :as => "allcategories"
   
 end
