@@ -54,9 +54,10 @@
 
 }
 
-#staticFirst{
+#staticFirst,#level_forms{
 	width: 700px;
 	height: auto;
 	overflow: hidden;
 	float: left;
 }
+

@@ -23,6 +23,7 @@
 		  <% else %>
 			<li><%= link_to "Admin Login", "/adminroute" %> </li>
 		  	<li><%= link_to "Holders Login", "/holders" %></li>
+		  	<li><%= link_to "Holders Signup", "/holders" %></li>
 		  	<li><%= link_to "About" , "/about" %></li>
 		  <% end %>
 		</ol>
@@ -34,9 +35,18 @@
 		<div class="cataghead">
 			<h2>Category</h2>
 		</div>
-		<div class="central">
-			Laptops
-		</div>
+		<% if !allcategories.blank? %>
+		  <% for item in allcategories %>    
+		  	<div class="central">
+				<%= item.name %>
+			</div>
+		  <% end %>
+		<% else %>
+			<div class="central">
+				Laptops
+			</div>
+		<% end %>
+		
 		<div class="attachbotom">
 		</div>
 	</div>

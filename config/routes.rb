@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'categories/index'
+
   get 'sessions/index'
 
   get 'front_end/index'
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :admins
   resources :sessions
+  resources :categories
 
   root "front_end#index"
 
@@ -15,5 +18,7 @@ Rails.application.routes.draw do
   get "about" => "front_end#about", :as => "about"
   get "adminroute" => "sessions#index" , :as => "adminroute"
   get "adminout" => "sessions#destroy" , :as => "adminout"
+
+  get "addcategory" => "categories#index" , :as => "addcategory"
   
 end
