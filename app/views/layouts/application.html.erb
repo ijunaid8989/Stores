@@ -16,9 +16,15 @@
 	<% %>
 		<ol class="breadcrumb">
 		  <li><%= link_to "Home", "/home" %></li>
-		  <li><%= link_to "Admin Login", "/admin" %> </li>
-		  <li><%= link_to "Holders Login", "/holders" %></li>
-		  <li><%= link_to "About" , "/about" %></li>
+		  <% if current_admin %>
+		  	<li><%= link_to "Add Category", "/addcategory" %> </li>
+		  	<li><%= link_to "Approve Stores", "/adminlogout" %> </li>
+		  	<li><%= link_to "Logout", "/adminout" %> </li>
+		  <% else %>
+			<li><%= link_to "Admin Login", "/adminroute" %> </li>
+		  	<li><%= link_to "Holders Login", "/holders" %></li>
+		  	<li><%= link_to "About" , "/about" %></li>
+		  <% end %>
 		</ol>
 	<%  %>
 </section>

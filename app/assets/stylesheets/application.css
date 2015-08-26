@@ -51,5 +51,12 @@
 	padding: 10px 0px;
 	text-align: center;
 	color: #337ab7;
-	
+
+}
+
+#staticFirst{
+	width: 700px;
+	height: auto;
+	overflow: hidden;
+	float: left;
 }
