@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'front_end/index'
+
   get 'admins/index'
 
   resources :admins
