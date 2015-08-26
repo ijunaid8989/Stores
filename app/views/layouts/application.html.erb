@@ -7,10 +7,34 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% if flash[:notice] %>
-	<%= flash[:notice] %>
-<% end %>
-<%= yield %>
+<div class="container">
+	<% if flash[:notice]%>
+		<div class="alert alert-info"><%= flash[:notice] %></div>
+	<% end %>
+</div>
+<section class="container">
+	<% %>
+		<ol class="breadcrumb">
+		  <li><%= link_to "Home", "/home" %></li>
+		  <li><%= link_to "Admin Login", "/admin" %> </li>
+		  <li><%= link_to "Holders Login", "/holders" %></li>
+		  <li><%= link_to "About" , "/about" %></li>
+		</ol>
+	<%  %>
+</section>
 
+<div class="container">
+	<div id="left_column" class="column col-xs-12 col-sm-3">
+		<div class="cataghead">
+			<h2>Category</h2>
+		</div>
+		<div class="central">
+			Laptops
+		</div>
+		<div class="attachbotom">
+		</div>
+	</div>
+	<%= yield %>
+</div>
 </body>
 </html>
