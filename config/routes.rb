@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :admins
   resources :sessions
   resources :categories
+  resources :storeups
 
   root "front_end#index"
 
@@ -24,5 +25,7 @@ Rails.application.routes.draw do
   get "addcategory" => "categories#index" , :as => "addcategory"
 
   get "allcategories" => "categories#show" , :as => "allcategories"
+
+  get "storesignup" => "storeups#index" , :as => "storesignup"
   
 end

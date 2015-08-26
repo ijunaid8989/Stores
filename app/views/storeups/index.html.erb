@@ -1,2 +1,19 @@
-<h1>Storeups#index</h1>
-<p>Find me in app/views/storeups/index.html.erb</p>
+<%= form_for @store , :html => {:id => "level_forms"}  do |f| %>
+	<div class="form-group">
+		<%= f.label :levelname, "Store Name :" %>
+		<%= f.text_field :store_name , :class => "form-control" , :placeholder => "Store Name" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :licence, "Licence No :" %>
+		<%= f.text_field :licence , :class => "form-control" , :placeholder => "Store Name" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :owner_name, " Owner Name :" %>
+		<%= f.text_field :owner_name , :class => "form-control" , :placeholder => "Owner Name" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :owner_cnic, "Owner CNIC :" %>
+		<%= f.text_field :owner_cnic , :class => "form-control" , :placeholder => "Owner Cnic" %>
+	</div>
+	<%= f.submit :Create , :class => "btn btn-primary" %>
+<% end %>
