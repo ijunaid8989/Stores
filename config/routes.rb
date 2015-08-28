@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
-  get 'storeups/index'
 
-  get 'categories/index'
-
-  get 'sessions/index'
-
-  get 'front_end/index'
+  get 'storeins/index'
 
   get 'admins/index'
 
@@ -16,22 +11,21 @@ Rails.application.routes.draw do
 
   root "front_end#index"
 
+  get "adminsetup" => "admins#index" , :as => "adminsetup"
 
   get "home" => "front_end#index" , :as => "home"
   get "about" => "front_end#about", :as => "about"
+
   get "adminroute" => "sessions#index" , :as => "adminroute"
   get "adminout" => "sessions#destroy" , :as => "adminout"
 
   get "addcategory" => "categories#index" , :as => "addcategory"
-
   get "allcategories" => "categories#show" , :as => "allcategories"
 
   get "storesignup" => "storeups#index" , :as => "storesignup"
-
   get "allstores" => "storeups#show" , :as => "allstores"
-
   get "approve" => "storeups#approve" , :as => "approve"
-
   get "allstoress" => "storeups#allinall" , :as => "allstoress"
+
   
 end

@@ -1,0 +1,2 @@
+module StoreinsHelper
+end
