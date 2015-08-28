@@ -22,9 +22,13 @@
 		  	<li><%= link_to "All Categories", "/allcategories" %> </li>
 		  	<li><%= link_to "All Stores", "/allstoress" %> </li>
 		  	<li><%= link_to "Logout", "/adminout" %> </li>
-		  <% else %>
+		  <% elsif current_store %>
+		  		<li><%= link_to "Add Product", "/test" %> </li>
+		  		<li><%= link_to "Store Profile", "/test" %> </li>
+		  		<li><%= link_to "Logout", "/storeout" %> </li>
+		  	<% else %>
 			<li><%= link_to "Admin Login", "/adminroute" %> </li>
-		  	<li><%= link_to "Store Login", "/storesin" %></li>
+		  	<li><%= link_to "Store Login", "/storelogin" %></li>
 		  	<li><%= link_to "Store Signup", "/storesignup" %></li>
 		  	<li><%= link_to "About" , "/about" %></li>
 		  <% end %>

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :sessions
   resources :categories
   resources :storeups
+  resources :storeins
 
   root "front_end#index"
 
@@ -26,6 +27,9 @@ Rails.application.routes.draw do
   get "allstores" => "storeups#show" , :as => "allstores"
   get "approve" => "storeups#approve" , :as => "approve"
   get "allstoress" => "storeups#allinall" , :as => "allstoress"
+
+  get "storelogin" => "storeins#index" , :as => "storelogin"
+  get "storeout" => "storeins#destroy" , :as => "storeout"
 
   
 end

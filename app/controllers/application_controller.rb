@@ -7,13 +7,20 @@ class ApplicationController < ActionController::Base
   def current_admin
     @current_admin ||= Admin.find(session[:admin_id]) if session[:admin_id]
   end
-  helper_method :current_admin , :allcategories
+  def current_store
+    @current_store ||= Storeup.find(session[:store_id]) if session[:store_id]
+  end
+
+  helper_method :current_admin , :allcategories , :current_store
 
   def allcategories
     @categories = Category.all
     if @categories
       @categories
     end
+  end
+  def auth_store
+    redirect_to '/storelogin' unless current_store
   end
   def authorize
     redirect_to '/adminroute' unless current_admin

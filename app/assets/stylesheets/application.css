@@ -61,3 +61,6 @@
 	float: left;
 }
 
+.breadcrumb li a{
+	font-weight: bold;
+}
