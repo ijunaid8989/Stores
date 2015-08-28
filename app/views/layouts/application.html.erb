@@ -18,8 +18,9 @@
 		  <li><%= link_to "Home", "/home" %></li>
 		  <% if current_admin %>
 		  	<li><%= link_to "Add Category", "/addcategory" %> </li>
-		  	<li><%= link_to "Approve Stores", "/adminlogout" %> </li>
+		  	<li><%= link_to "Approve Stores", "/allstores" %> </li>
 		  	<li><%= link_to "All Categories", "/allcategories" %> </li>
+		  	<li><%= link_to "All Stores", "/allstoress" %> </li>
 		  	<li><%= link_to "Logout", "/adminout" %> </li>
 		  <% else %>
 			<li><%= link_to "Admin Login", "/adminroute" %> </li>

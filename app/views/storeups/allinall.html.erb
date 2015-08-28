@@ -1,0 +1,22 @@
+<table id="level_forms" class="table table-striped">
+	<thead>
+		<tr>
+			<th>Row</th>
+        	<th>Store Name</th>
+        	<th>Licence</th>
+            <th>Owner name</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<% if !@storeall.blank? %>
+    	  <% for item in @storeall %>
+    	    <tr>
+    	    	<td><%= item.id %></td>
+    			<td><%= item.store_name %></td>
+                <td><%= item.licence %></td>
+            	<td><%= item.owner_name %></td>
+        	</tr>
+    	  <% end %>    	  
+    	<% end %>
+    </tbody>
+</table>

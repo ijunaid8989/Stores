@@ -27,5 +27,11 @@ Rails.application.routes.draw do
   get "allcategories" => "categories#show" , :as => "allcategories"
 
   get "storesignup" => "storeups#index" , :as => "storesignup"
+
+  get "allstores" => "storeups#show" , :as => "allstores"
+
+  get "approve" => "storeups#approve" , :as => "approve"
+
+  get "allstoress" => "storeups#allinall" , :as => "allstoress"
   
 end

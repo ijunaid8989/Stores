@@ -1,0 +1,21 @@
+<table id="level_forms" class="table table-striped">
+	<thead>
+		<tr>
+			<th>Row</th>
+        	<th>Store Name</th>
+        	<th>Licence</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<% if !@stores.blank? %>
+    	  <% for item in @stores %>
+    	    <tr>
+    	    	<td><%= item.id %></td>
+    			<td><%= item.store_name %></td>
+            	<td><%= item.licence %></td>
+            	<td><%= link_to "Approve", :action => "approve", :id => item.id %></td>
+        	</tr>
+    	  <% end %>    	  
+    	<% end %>
+    </tbody>
+</table>
