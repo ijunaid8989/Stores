@@ -16,7 +16,7 @@ class StoreinsController < ApplicationController
   			redirect_to "/storelogin" , :notice => "Your store isnt approved !"
   		end
   	else
-  		redirect_to "/storesignup" , :notice => "Sorry you Dont have account , Kindly Sign UP !"
+  		redirect_to "/storelogin" , :notice => "Sorry you info dont match here !"
   	end
   end
   def destroy
