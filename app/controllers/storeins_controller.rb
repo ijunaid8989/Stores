@@ -12,9 +12,11 @@ class StoreinsController < ApplicationController
   		if @approval == "A"
   			session[:store_id] = store.id
   			redirect_to root_url , :notice => "Store wala hai bhai"
+  		else
+  			redirect_to "/storelogin" , :notice => "Your store isnt approved !"
   		end
   	else
-  		redirect_to "/storelogin" , :notice => "Your store isnt approved !"
+  		redirect_to "/storesignup" , :notice => "Sorry you Dont have account , Kindly Sign UP !"
   	end
   end
   def destroy
