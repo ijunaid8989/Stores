@@ -37,4 +37,6 @@ Rails.application.routes.draw do
   get "addproduct" => "products#index" , :as => "addproduct"
   get "allproducts" => "products#show" , :as => "allproducts"
   
+  get "categroycall" => "front_end#categroycall" , :as => "categroycall"
+
 end
