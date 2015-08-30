@@ -12,6 +12,7 @@
     			<td><%= item.id %></td>
             	<td><%= item.name %></td>
                 <td><%= link_to "Edit" , edit_product_path(item.id) %></td>
+                <td><%= link_to "Detele" , item , method: :delete , data: { confirm: "Are You sure??"} %></td>
         	</tr>
     	  <% end %>    	  
     	<% end %>

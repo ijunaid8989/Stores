@@ -23,6 +23,10 @@ class ProductsController < ApplicationController
   		redirect_to "/allproducts" , :notice => "Updated"
   	end
   end
+  def destroy
+  	Product.find(params[:id]).destroy
+  	redirect_to "/allproducts" ,:notice => "Deleted Product"
+  end
 
 private
 def pro_params
