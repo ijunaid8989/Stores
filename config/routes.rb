@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :storeups
   resources :storeins
+  resources :products
 
   root "front_end#index"
 
@@ -32,6 +33,8 @@ Rails.application.routes.draw do
 
   get "storelogin" => "storeins#index" , :as => "storelogin"
   get "storeout" => "storeins#destroy" , :as => "storeout"
+
+  get "addproduct" => "products#index" , :as => "addproduct"
 
   
 end

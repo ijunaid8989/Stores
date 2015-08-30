@@ -1,2 +1,19 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<%= form_for @product , :html => {:id => "level_forms"}  do |f| %>
+	<div class="form-group">
+		<%= f.label :levelname, "Product Name :" %>
+		<%= f.text_field :name , :class => "form-control" , :placeholder => "Product Name" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :shortdesc, "Short description" %>
+		<%= f.text_field :short_desc , :class => "form-control" , :placeholder => "Short description" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :longdesc, "Long description" %>
+		<%= f.text_area :long_desc , row: 3 ,  :class => "form-control" , :placeholder => "Long description" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :categories, "Categories" %>
+		<%= f.select :category_id , options_from_collection_for_select(@categories , "id" , "name") , :class => "form-control" %>
+	</div>
+	<%= f.submit :Create , :class => "btn btn-primary" %>
+<% end %>

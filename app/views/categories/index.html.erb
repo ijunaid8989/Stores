@@ -1,6 +1,6 @@
 <%= form_for @category , :html => {:id => "level_forms"}  do |f| %>
 	<div class="form-group">
-		<%= f.label :levelname, "Category Name :" %>
+		<%= f.label :categoryname, "Category Name :" %>
 		<%= f.text_field :name , :class => "form-control" , :placeholder => "Category Name" %>
 	</div>
 	<%= f.submit :Create , :class => "btn btn-primary" %>
