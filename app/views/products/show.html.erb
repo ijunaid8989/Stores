@@ -1,0 +1,19 @@
+<table id="level_forms" class="table table-striped">
+	<thead>
+		<tr>
+			<th>Row</th>
+        	<th>Product Name</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<% if !@allproducts.blank? %>
+    	  <% for item in @allproducts %>
+    	    <tr>
+    			<td><%= item.id %></td>
+            	<td><%= item.name %></td>
+                <td><%= link_to "Edit" , edit_product_path(item.id) %></td>
+        	</tr>
+    	  <% end %>    	  
+    	<% end %>
+    </tbody>
+</table>

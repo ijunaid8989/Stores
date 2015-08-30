@@ -35,6 +35,6 @@ Rails.application.routes.draw do
   get "storeout" => "storeins#destroy" , :as => "storeout"
 
   get "addproduct" => "products#index" , :as => "addproduct"
-
+  get "allproducts" => "products#show" , :as => "allproducts"
   
 end

@@ -10,6 +10,19 @@ class ProductsController < ApplicationController
   		redirect_to "/addproduct" , :notice => "Product has been added!!"
   	end
   end
+  def edit
+  	@product = Product.find(params[:id])
+  	@categories = Category.all
+  end
+  def show
+  	@allproducts = Product.all
+  end
+  def update
+  	@product = Product.find(params[:id])
+  	if @product.update_attributes(pro_params)
+  		redirect_to "/allproducts" , :notice => "Updated"
+  	end
+  end
 
 private
 def pro_params
