@@ -38,5 +38,5 @@ Rails.application.routes.draw do
   get "allproducts" => "products#show" , :as => "allproducts"
   
   get "categroycall" => "front_end#categroycall" , :as => "categroycall"
-
+  get "fullpro" => "front_end#fullpro" , :as => "fullpro"
 end

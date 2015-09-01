@@ -7,6 +7,10 @@ class FrontEndController < ApplicationController
   def categroycall
   	@category = Category.find(params[:id])
 
-  	@products = @categroy.products.all
+  	@products = @category.products.all
+  end
+  def fullpro
+  	@product = Product.find(params[:id])
   end
 end
+
