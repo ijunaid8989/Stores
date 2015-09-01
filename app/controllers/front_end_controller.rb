@@ -1,5 +1,6 @@
 class FrontEndController < ApplicationController
   def index
+  	@tproduct = Product.all
   end
   def about
   	

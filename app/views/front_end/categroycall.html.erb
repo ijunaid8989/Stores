@@ -1,12 +1,12 @@
 <section id="staticFirst">
-	<div class="product_dot">
-		<% if !@products.blank? %>
-		  <% for item in @products %>
+	<% if !@products.blank? %>
+	  <% for item in @products %>
+		  <div class="product_dot">
 		    <h3><%= link_to item.name, :action => "fullpro", :id => item.id %></h3>
 		    <p><%= item.short_desc %></p>
-		  <% end %>
-		<% else %>
-		  <p>No product has been added yet</p>
-		<% end %>
-	</div>
+		  </div>
+	  <% end %>
+	<% else %>
+	  <p>No product has been added yet</p>
+	<% end %>
 </section>
